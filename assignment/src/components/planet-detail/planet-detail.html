@@ -1,0 +1,13 @@
+<section class="col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            <p ng-repeat="(key,value) in vm.planet"><label>{{key}}</label> {{value}}</p>
+        </div>
+    </div>
+</section>
+<section class="col-md-8">
+    <planets-graph planet-results="vm.planetResult"></planets-graph>
+</section>

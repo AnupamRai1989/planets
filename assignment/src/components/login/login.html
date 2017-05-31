@@ -1,0 +1,21 @@
+<form class="star-wars__login__form" ng-submit="vm.signIn()" name="loginForm">
+    <h2 class="star-wars__login__form__header">Sign In</h2>
+    <article class="input-group">
+        <label>Username</label>
+        <input name="username" class="form-control" ng-model="vm.username" ng-minlength="5" required>
+        <article ng-show="loginForm.username.$touched && loginForm.username.$invalid">
+            <p ng-show="loginForm.username.$error.required" class="error-message">Please enter username</p>
+            <p ng-show="loginForm.username.$error.minlength" class="error-message">Username should have minimum 5 characters</p>
+        </article>
+    </article>
+    <article class="input-group">
+        <label>Password</label>
+        <input name="password" class="form-control" type="password" ng-model="vm.password" ng-minlength="5" required>
+        <article ng-show="loginForm.password.$touched && loginForm.password.$invalid">
+            <p ng-show="loginForm.password.$error.required" class="error-message">Please enter password</p>
+            <p ng-show="loginForm.password.$error.minlength" class="error-message">Password should have minimum 5 characters</p>
+        </article>
+    </article>
+    <article ng-if="vm.authenticationError" class="error-message">{{vm.authenticationError}}</article>
+    <button class="btn btn-mg btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid">Sign In</button>
+</form>

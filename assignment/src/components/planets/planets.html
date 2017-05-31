@@ -1,0 +1,17 @@
+<section class="row">
+    <section class="col-md-12">
+        <section class="col-md-4">
+            <article class="input-group">
+                <label>Search</label>
+                <input ng-model="vm.searchText" class="form-control" placeholder="Search your favourite planet" />
+            </article>
+            <hr>
+            <ul ng-repeat="result in vm.planets.results | filter: vm.searchText" class="star-wars__planets__list">
+                <a ui-sref="planetDetail({planetId:result.id})" class="star-wars__planets__list__item">{{result.name}}</a>
+            </ul>
+        </section>
+        <section class="col-md-8">
+            <planets-graph planet-results="vm.planets.results"></planets-graph>
+        </section>
+    </section>
+</section>

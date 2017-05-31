@@ -1,0 +1,10 @@
+.star-wars__planets {
+    &__list {
+        list-style: none;
+        &__item {
+            clear: both;
+            height: 115px;
+            padding-top: 15px;
+        }
+    }
+}

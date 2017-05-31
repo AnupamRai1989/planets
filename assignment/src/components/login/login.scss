@@ -1,0 +1,29 @@
+.star-wars__login {
+    &__form {
+        max-width: 350px;
+        margin:50px auto;
+        background: #FFF;           
+        padding: 30px 45px;
+        &__header {
+            margin-top:0;
+            margin-bottom: 20px; 
+        }
+        .input-group {
+            width:100%;
+            & + .input-group {
+                margin-top: 10px; 
+            }
+        }
+        button[type="submit"] {
+            margin-top:20px;
+        }
+            
+        .error-message {
+            color:red;
+        }
+        
+        input.ng-invalid.ng-touched {
+            border: 1px solid #FA787E;
+        }
+    }
+}
